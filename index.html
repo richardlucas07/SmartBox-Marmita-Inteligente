@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBox – Marmita Inteligente Sustentável</title>
+    
+    <!-- Configuração do Tailwind CSS e Carregamento -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Configuração do Tailwind. O carregamento do CDN acima deve ser a primeira coisa.
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'smart-blue': '#3B82F6',
+                        'smart-green': '#22C55E',
+                        'smart-gray-light': '#F8F9FA',
+                        'smart-gray-dark': '#E2E8F0',
+                        'smart-text': '#334155',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <!-- Estilos de Fallback e Customização -->
+    <style>
+        /* Estilo básico de fallback para garantir que o conteúdo seja visível */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #334155; /* smart-text fallback */
+            background-color: #F8F9FA; /* smart-gray-light fallback */
+        }
+        /* Estilos adicionais para o pitch */
+        .shadow-smart {
+            box-shadow: 0 10px 30px -10px rgba(59, 130, 246, 0.4); /* Sombra azul para destaque */
+        }
+    </style>
+</head>
+<body class="bg-smart-gray-light font-sans text-smart-text antialiased">
+
+    <!-- Seção de Navegação (Fixa no topo para mobile) -->
+    <header class="sticky top-0 bg-white shadow-lg z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-smart-blue tracking-tight">SmartBox</h1>
+            <nav>
+                <a href="#ideia" class="text-sm font-medium hover:text-smart-blue transition duration-150 ease-in-out hidden sm:inline-block mx-3">Ideia</a>
+                <a href="#galeria" class="text-sm font-medium hover:text-smart-blue transition duration-150 ease-in-out hidden sm:inline-block mx-3">Fotos</a>
+                <a href="#icp" class="text-sm font-medium hover:text-smart-blue transition duration-150 ease-in-out hidden sm:inline-block mx-3">Público</a>
+                <a href="#modelos" class="text-sm font-medium text-white bg-smart-blue px-4 py-2 rounded-full hover:bg-blue-600 transition duration-150 ease-in-out">Modelos</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Principal / Hero -->
+    <main class="pt-12 pb-20">
+        <section id="hero" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="lg:w-3/4 mx-auto">
+                <p class="text-smart-blue font-semibold uppercase tracking-widest mb-3">Sustentabilidade & Tecnologia</p>
+                <h2 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-6">
+                    SmartBox: Marmita Inteligente <span class="text-smart-blue">Sustentável</span>
+                </h2>
+                <p class="text-xl text-smart-text mb-10">
+                    A inovação que traz praticidade, economia e responsabilidade ambiental para as suas refeições diárias. Refeições perfeitas a qualquer hora e lugar.
+                </p>
+                <div class="relative w-full max-w-2xl mx-auto">
+                    <!-- CORREÇÃO APLICADA: Assumindo que as imagens estão na subpasta 'imagens/' -->
+                    <img 
+                        src="imagens/imagem-marmita1.jpg" 
+                        alt="SmartBox Marmita Inteligente em uso no escritório, mostrando o controle de temperatura digital." 
+                        class="w-full h-auto rounded-3xl shadow-2xl shadow-smart object-cover"
+                        onerror="this.onerror=null; this.src='https://placehold.co/1024x576/3B82F6/FFFFFF?text=Imagem+do+Produto+Indisponível'"
+                    >
+                    <p class="mt-4 text-gray-500 italic">SmartBox: Sempre na temperatura perfeita (65°C de Exemplo)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 1: Ideia Original e Aplicável (Recursos) -->
+        <section id="ideia" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <h3 class="text-3xl font-bold text-gray-900 text-center mb-12">1. Ideia Original e Aplicável</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Cartão 1: Controle de Temperatura -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-smart-blue hover:shadow-xl transition duration-300">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <!-- Icone de Termômetro -->
+                        <svg class="w-8 h-8 text-smart-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c-2 3.5-4 5-4 5h14c-1 0-2-1.5-4-5 2-1 3-3.5 3-3.5zM12 21v-2m0-18V3m-7 8h2m10 0h2"></path></svg>
+                        <h4 class="text-xl font-semibold text-gray-900">Controle Térmico Inteligente</h4>
+                    </div>
+                    <p class="text-smart-text">
+                        Mantém a comida na temperatura ideal (aquecida ou resfriada) sem depender de micro-ondas ou geladeira. A temperatura é ajustável pelo usuário.
+                    </p>
+                </div>
+
+                <!-- Cartão 2: Energia e Praticidade -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-smart-blue hover:shadow-xl transition duration-300">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <!-- Icone de Raio/Bateria -->
+                        <svg class="w-8 h-8 text-smart-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <h4 class="text-xl font-semibold text-gray-900">Recarga USB e Portabilidade</h4>
+                    </div>
+                    <p class="text-smart-text">
+                        Funciona com bateria de longa duração, recarregável via USB, oferecendo total liberdade e portabilidade para o uso em qualquer ambiente.
+                    </p>
+                </div>
+
+                <!-- Cartão 3: Sustentabilidade -->
+                <div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-smart-green hover:shadow-xl transition duration-300">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <!-- Icone de Reciclagem -->
+                        <svg class="w-8 h-8 text-smart-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                        <h4 class="text-xl font-semibold text-gray-900">Compromisso Ecológico</h4>
+                    </div>
+                    <p class="text-smart-text">
+                        Construída com materiais de alta durabilidade e recicláveis, reduzindo o desperdício e reforçando o compromisso com a sustentabilidade ambiental.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: Galeria de Imagens -->
+        <section id="galeria" class="bg-smart-gray-dark py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-3xl font-bold text-gray-900 text-center mb-12">Galeria: Design e Praticidade</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- CORREÇÃO APLICADA: Mudança para 'imagens/imagem-marmita2.jpg' -->
+                    <div class="relative overflow-hidden rounded-xl shadow-lg group">
+                        <img 
+                            src="imagens/imagem-marmita2.jpg" 
+                            alt="Visão de perto da SmartBox mostrando o interior limpo." 
+                            class="w-full h-72 object-cover transition duration-500 group-hover:scale-105"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/3B82F6/FFFFFF?text=Foto+2+Indisponível'"
+                        >
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <p class="text-white text-lg font-semibold">Interior Limpo e Dividido</p>
+                        </div>
+                    </div>
+
+                    <!-- CORREÇÃO APLICADA: Mudança para 'imagens/imagem-marmita3.jpg' -->
+                    <div class="relative overflow-hidden rounded-xl shadow-lg group">
+                        <img 
+                            src="imagens/imagem-marmita3.jpg" 
+                            alt="SmartBox sendo manuseada por uma pessoa, destacando a portabilidade." 
+                            class="w-full h-72 object-cover transition duration-500 group-hover:scale-105"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/3B82F6/FFFFFF?text=Foto+3+Indisponível'"
+                        >
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <p class="text-white text-lg font-semibold">Portabilidade e Design</p>
+                        </div>
+                    </div>
+                    
+                    <!-- CORREÇÃO APLICADA: Mudança para 'imagens/imagem-marmita4.jpg' -->
+                    <div class="relative overflow-hidden rounded-xl shadow-lg group">
+                        <img 
+                            src="imagens/imagem-marmita4.jpg" 
+                            alt="A SmartBox em uma cena de almoço, com alimentos frescos." 
+                            class="w-full h-72 object-cover transition duration-500 group-hover:scale-105"
+                            onerror="this.onerror=null; this.src='https://placehold.co/600x400/3B82F6/FFFFFF?text=Foto+4+Indisponível'"
+                        >
+                        <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <p class="text-white text-lg font-semibold">Refeições Saudáveis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 3: ICP - Cliente Ideal -->
+        <section id="icp" class="bg-white py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h3 class="text-3xl font-bold text-gray-900 text-center mb-12">2. ICP – Cliente Ideal (Target Market)</h3>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    
+                    <!-- ICP 1: Trabalhadores -->
+                    <div class="p-6 rounded-xl">
+                        <svg class="w-12 h-12 text-smart-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6c0 1.1.9 2 2 2h2m4 0h12a2 2 0 002-2v-3a2 2 0 00-2-2H9m10-6a2 2 0 00-2-2V7m-4 5h.01"></path></svg>
+                        <h4 class="text-xl font-semibold mb-2">Trabalhadores e Economia</h4>
+                        <p class="text-smart-text">Focado em trabalhadores de renda baixa ou média que levam marmita para economizar na alimentação diária. Reduz o custo com restaurantes e lanches.</p>
+                    </div>
+
+                    <!-- ICP 2: Estudantes e Rotina -->
+                    <div class="p-6 rounded-xl">
+                        <svg class="w-12 h-12 text-smart-blue mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                        <h4 class="text-xl font-semibold mb-2">Estudantes e Longas Jornadas</h4>
+                        <p class="text-smart-text">Ideal para estudantes que passam o dia fora de casa (aulas, estágios), garantindo uma refeição quente e saudável entre as atividades.</p>
+                    </div>
+
+                    <!-- ICP 3: Saúde e Bem-Estar -->
+                    <div class="p-6 rounded-xl">
+                        <svg class="w-12 h-12 text-smart-green mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        <h4 class="text-xl font-semibold mb-2">Foco em Saúde</h4>
+                        <p class="text-smart-text">Atende pessoas preocupadas com a saúde que preferem levar e consumir comida caseira, controlando melhor os ingredientes e nutrientes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 4: Modelos e Pricing -->
+        <section id="modelos" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <h3 class="text-3xl font-bold text-gray-900 text-center mb-12">3. Modelos e Investimento</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Modelo Básico 350ml -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-smart-gray-dark text-center hover:shadow-xl transition duration-300">
+                    <p class="text-sm font-medium text-smart-blue uppercase mb-2">Modelo Inicial</p>
+                    <h4 class="text-3xl font-extrabold mb-4">SmartBox Compacta</h4>
+                    <p class="text-5xl font-extrabold text-smart-blue mb-6">R$ 90,00</p>
+                    <p class="text-gray-500 mb-6">Capacidade: <span class="font-bold text-smart-text">350 ml</span></p>
+                    <ul class="text-left text-smart-text space-y-3">
+                        <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-smart-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Aquecimento/Resfriamento Básico</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-smart-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Recarga USB</li>
+                        <li class="flex items-center text-gray-400"><svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> Sem Display Digital</li>
+                    </ul>
+                    <button onclick="showInfo('SmartBox Compacta')" class="mt-8 w-full bg-smart-blue text-white py-3 rounded-xl font-semibold hover:bg-blue-600 transition duration-150 ease-in-out">
+                        Ver Detalhes
+                    </button>
+                </div>
+
+                <!-- Modelo Pro 350ml (Destaque) -->
+                <div class="bg-smart-blue p-8 rounded-2xl shadow-xl shadow-smart text-center transform scale-105 transition duration-300">
+                    <p class="text-sm font-medium text-white uppercase mb-2">Mais Vantagens</p>
+                    <h4 class="text-3xl font-extrabold mb-4 text-white">SmartBox Pro</h4>
+                    <p class="text-5xl font-extrabold text-white mb-6">R$ 135,00</p>
+                    <p class="text-white opacity-90 mb-6">Capacidade: <span class="font-bold">350 ml</span></p>
+                    <ul class="text-left text-white space-y-3">
+                        <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span class="font-bold">Controle Digital</span> de Temperatura</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span class="font-bold">Maior Autonomia</span> de Bateria</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Design Premium e Compacto</li>
+                    </ul>
+                    <button onclick="showInfo('SmartBox Pro')" class="mt-8 w-full bg-white text-smart-blue py-3 rounded-xl font-semibold hover:bg-gray-100 transition duration-150 ease-in-out">
+                        ESCOLHA IDEAL
+                    </button>
+                </div>
+
+                <!-- Modelo Família 1L -->
+                <div class="bg-white p-8 rounded-2xl shadow-lg border border-smart-gray-dark text-center hover:shadow-xl transition duration-300">
+                    <p class="text-sm font-medium text-smart-blue uppercase mb-2">Para Porções Maiores</p>
+                    <h4 class="text-3xl font-extrabold mb-4">SmartBox Max</h4>
+                    <p class="text-5xl font-extrabold text-smart-blue mb-6">R$ 300,00</p>
+                    <p class="text-gray-500 mb-6">Capacidade: <span class="font-bold text-smart-text">1 Litro</span></p>
+                    <ul class="text-left text-smart-text space-y-3">
+                        <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-smart-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Capacidade Familiar/Longa Jornada</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-smart-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> <span class="font-bold">Sistema Turbo</span> de Aquecimento</li>
+                        <li class="flex items-center"><svg class="w-5 h-5 mr-2 text-smart-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Display Touch Integrado</li>
+                    </ul>
+                    <button onclick="showInfo('SmartBox Max')" class="mt-8 w-full bg-smart-blue text-white py-3 rounded-xl font-semibold hover:bg-blue-600 transition duration-150 ease-in-out">
+                        Ver Detalhes
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Mensagem de Informação (Modal Customizado) -->
+        <div id="info-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" onclick="hideInfo()">
+            <div class="bg-white p-6 rounded-lg max-w-sm w-full text-center" onclick="event.stopPropagation()">
+                <h4 id="modal-title" class="text-xl font-bold mb-4 text-smart-blue"></h4>
+                <p class="text-smart-text mb-6">
+                    Esta é uma funcionalidade de demonstração para a apresentação. Em um site real, aqui estariam as especificações técnicas completas e o link para compra.
+                </p>
+                <button onclick="hideInfo()" class="bg-smart-blue text-white px-6 py-2 rounded-lg hover:bg-blue-600">
+                    Entendi
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Rodapé/Contato para o Pitch -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-lg font-medium mb-3">Pitch de Produto | Projeto SmartBox</p>
+            <p class="text-sm text-gray-400">
+                A SmartBox combina inovação tecnológica com responsabilidade ambiental, criando valor para o consumidor e para o planeta.
+            </p>
+            <p class="mt-4 text-xs text-gray-500">Apresentação Conceitual. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para mostrar o modal de informação customizado
+        function showInfo(title) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('info-modal').classList.remove('hidden');
+        }
+
+        // Função para esconder o modal
+        function hideInfo() {
+            document.getElementById('info-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
